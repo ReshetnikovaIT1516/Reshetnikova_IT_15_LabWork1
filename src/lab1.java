@@ -159,6 +159,9 @@ public class lab1 {
     }
 
     public int findFirst (int[] arr, int x) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
                 return i;
@@ -168,8 +171,8 @@ public class lab1 {
     }
 
     public int maxAbs (int[] arr) {
-        if (arr.length == 0) {
-            return 0;
+        if (arr == null || arr.length == 0) {
+            return -1;
         }
 
         int max = Math.abs(arr[0]);
@@ -184,6 +187,7 @@ public class lab1 {
 
     public int[] add (int[] arr, int[] ins, int pos)
     {
+
         if (pos < 0 || pos > arr.length) {
             System.out.println("Неверное место вставки!");
             return null;

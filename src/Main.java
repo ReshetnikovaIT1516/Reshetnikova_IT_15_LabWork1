@@ -185,8 +185,14 @@ public class Main {
 
                 case "4.1":
                     System.out.println("Задача 4.1");
-                    System.out.print("Введите размер массива: ");
-                    int size = scanner.nextInt();
+                    int size;
+                    do {
+                        System.out.print("Введите размер массива (должен быть > 0): ");
+                        size = scanner.nextInt();
+                        if (size <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (size <= 0);
                     int[] arr = new int[size];
                     System.out.println("Введите элементы массива:");
                     for (int i = 0; i < size; i++) {
@@ -202,8 +208,14 @@ public class Main {
 
                 case "4.3":
                     System.out.println("Задача 4.3");
-                    System.out.print("Введите размер массива: ");
-                    int size17 = scanner.nextInt();
+                    int size17;
+                    do {
+                        System.out.print("Введите размер массива (должен быть > 0): ");
+                        size17 = scanner.nextInt();
+                        if (size17 <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (size17 <= 0);
                     int[] arr17 = new int[size17];
                     System.out.println("Введите элементы массива:");
                     for (int i = 0; i < size17; i++) {
@@ -217,8 +229,14 @@ public class Main {
 
                 case "4.5":
                     System.out.println("Задача 4.5");
-                    System.out.print("Введите размер массива arr: ");
-                    int sizeArr = scanner.nextInt();
+                    int sizeArr;
+                    do {
+                        System.out.print("Введите размер массива arr (должен быть > 0): ");
+                        sizeArr = scanner.nextInt();
+                        if (sizeArr <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (sizeArr <= 0);
                     int[] arr18 = new int[sizeArr];
 
                     System.out.println("Введите элементы массива arr:");
@@ -226,8 +244,15 @@ public class Main {
                         System.out.print("Элемент " + (i + 1) + ": ");
                         arr18[i] = scanner.nextInt();
                     }
-                    System.out.print("Введите размер массива ins: ");
-                    int sizeIns = scanner.nextInt();
+
+                    int sizeIns;
+                    do {
+                        System.out.print("Введите размер массива ins (должен быть > 0): ");
+                        sizeIns = scanner.nextInt();
+                        if (sizeIns <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (sizeIns <= 0);
                     int[] ins = new int[sizeIns];
                     System.out.println("Введите элементы массива ins:");
                     for (int i = 0; i < sizeIns; i++) {
@@ -253,8 +278,14 @@ public class Main {
 
                 case "4.7":
                     System.out.println("Задача 4.7");
-                    System.out.print("Введите размер массива: ");
-                    int size19 = scanner.nextInt();
+                    int size19;
+                    do {
+                        System.out.print("Введите размер массива (должен быть > 0): ");
+                        size19 = scanner.nextInt();
+                        if (size19 <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (size19 <= 0);
                     int[] arr19 = new int[size19];
                     System.out.println("Введите элементы массива:");
                     for (int i = 0; i < size19; i++) {
@@ -275,7 +306,14 @@ public class Main {
                 case "4.9":
                     System.out.println("Задача 4.9");
                     System.out.print("Введите размер массива: ");
-                    int size20 = scanner.nextInt();
+                    int size20;
+                    do {
+                        System.out.print("Введите размер массива (должен быть > 0): ");
+                        size20 = scanner.nextInt();
+                        if (size20 <= 0) {
+                            System.out.println("Ошибка! Размер массива должен быть больше 0.");
+                        }
+                    } while (size20 <= 0);
                     int[] arr20 = new int[size20];
                     System.out.println("Введите элементы массива:");
                     for (int i = 0; i < size20; i++) {
