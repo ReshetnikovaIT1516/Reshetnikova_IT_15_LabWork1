@@ -1,13 +1,10 @@
 import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while (true)
-        {
+        while (true) {
             System.out.println("1.1 - Дробная часть. ");
             System.out.println("1.3 - Букву в число. ");
             System.out.println("1.5 - Двузначное.  ");
@@ -49,8 +46,11 @@ public class Main
                     char x2 = scanner.next().charAt(0);
                     lab1 l2 = new lab1();
                     int result2 = l2.charToNum(x2);
-                    System.out.print("Переведенное в строку число: " + result2);
-                    break;
+                    if (result2 !=-1)
+                        System.out.print("Переведенное в строку число: " + result2);
+                    else
+                        System.out.println("Ошибка: вы ввели не верный символ: " + x2);
+                break;
 
                 case "1.5":
                     System.out.println("Задача 1.5");
@@ -189,8 +189,7 @@ public class Main
                     int size = scanner.nextInt();
                     int[] arr = new int[size];
                     System.out.println("Введите элементы массива:");
-                    for (int i = 0; i < size; i++)
-                    {
+                    for (int i = 0; i < size; i++) {
                         System.out.print("Элемент " + (i + 1) + ": ");
                         arr[i] = scanner.nextInt();
                     }
@@ -207,8 +206,7 @@ public class Main
                     int size17 = scanner.nextInt();
                     int[] arr17 = new int[size17];
                     System.out.println("Введите элементы массива:");
-                    for (int i = 0; i < size17; i++)
-                    {
+                    for (int i = 0; i < size17; i++) {
                         System.out.print("Элемент " + (i + 1) + ": ");
                         arr17[i] = scanner.nextInt();
                     }
@@ -222,9 +220,9 @@ public class Main
                     System.out.print("Введите размер массива arr: ");
                     int sizeArr = scanner.nextInt();
                     int[] arr18 = new int[sizeArr];
+
                     System.out.println("Введите элементы массива arr:");
-                    for (int i = 0; i < sizeArr; i++)
-                    {
+                    for (int i = 0; i < sizeArr; i++) {
                         System.out.print("Элемент " + (i + 1) + ": ");
                         arr18[i] = scanner.nextInt();
                     }
@@ -236,16 +234,18 @@ public class Main
                         System.out.print("Элемент " + (i + 1) + ": ");
                         ins[i] = scanner.nextInt();
                     }
-                    System.out.print("Введите позицию для вставки: ");
-                    int pos = scanner.nextInt();
+                    int pos;
+                    do {
+                        System.out.print("Введите позицию для вставки (0-" + sizeArr + "): ");
+                        pos = scanner.nextInt();
+                    }
+                    while (pos < 0 || pos > sizeArr);
                     lab1 l18 = new lab1();
                     int[] result18 = l18.add(arr18, ins, pos);
                     System.out.print("Результат вставки: ");
-                    for (int i = 0; i < result18.length; i++)
-                    {
+                    for (int i = 0; i < result18.length; i++) {
                         System.out.print(result18[i]);
-                        if (i < result18.length - 1)
-                        {
+                        if (i < result18.length - 1) {
                             System.out.print(" ");
                         }
                     }
@@ -264,11 +264,9 @@ public class Main
                     lab1 l19 = new lab1();
                     int[] result19 = l19.reverseBack(arr19);
                     System.out.print("Массив задом наперед: ");
-                    for (int i = 0; i < result19.length; i++)
-                    {
+                    for (int i = 0; i < result19.length; i++) {
                         System.out.print(result19[i]);
-                        if (i < result19.length - 1)
-                        {
+                        if (i < result19.length - 1) {
                             System.out.print(" ");
                         }
                     }
@@ -289,11 +287,9 @@ public class Main
                     lab1 l20 = new lab1();
                     int[] result20 = l20.findAll(arr20, x20);
                     System.out.print("Все индексы вхождения числа х в массив: ");
-                    for (int i = 0; i < result20.length; i++)
-                    {
+                    for (int i = 0; i < result20.length; i++) {
                         System.out.print(result20[i]);
-                        if (i < result20.length - 1)
-                        {
+                        if (i < result20.length - 1) {
                             System.out.print(" ");
                         }
                     }
@@ -308,7 +304,7 @@ public class Main
                     System.out.println("Неверный выбор! Попробуйте снова.");
             }
 
-            System.out.println("\nНажмите Enter чтобы снова выбрать номер задачи");
+            System.out.println("\nНажмите 'Enter' чтобы снова выбрать номер задачи");
             scanner.nextLine();
             scanner.nextLine();
         }
