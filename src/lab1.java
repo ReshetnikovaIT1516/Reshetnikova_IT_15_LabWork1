@@ -22,16 +22,14 @@ public class lab1 {
     public boolean isInRange (int a, int b, int num) {
         if (a <= b) {
             return num >= a && num <= b;
-        }
-        else {
+        } else {
             return num >= b && num <= a;
         }
     }
     public boolean isEqual(int a, int b, int c) {
         if (a == b && b == c) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

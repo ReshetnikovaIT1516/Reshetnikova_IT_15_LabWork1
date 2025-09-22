@@ -263,8 +263,7 @@ public class Main {
                     do {
                         System.out.print("Введите позицию для вставки (0-" + sizeArr + "): ");
                         pos = scanner.nextInt();
-                    }
-                    while (pos < 0 || pos > sizeArr);
+                    } while (pos < 0 || pos > sizeArr);
                     lab1 l18 = new lab1();
                     int[] result18 = l18.add(arr18, ins, pos);
                     System.out.print("Результат вставки: ");
