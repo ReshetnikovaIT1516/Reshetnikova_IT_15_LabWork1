@@ -34,36 +34,40 @@ public class lab1 {
         }
     }
     public int abs (int x) {
-        if(x<0)
+        if(x<0) {
             return -x;
-        else
+        } else {
             return x;
+        }
+
     }
 
     public boolean is35 (int x) {
-        if (x%3==0 && x%5==0)
+        if (x%3==0 && x%5==0){
             return false;
-        if (x%3==0 || x%5==0)
+        }
+        if (x%3==0 || x%5==0) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
     public int max3 (int x, int y, int z) {
         int max = x;
-        if (y > max)
-        {
+        if (y > max) {
             max = y;
         }
-        if (z > max)
-        {
+        if (z > max) {
             max = z;
         }
         return max;
     }
     public int sum2 (int x, int y) {
-        if(x+y<=19 && x+y>=10)
+        if(x+y<=19 && x+y>=10) {
             return 20;
-        else return x+y;
+        } else {
+            return x + y;
+        }
     }
 
 
